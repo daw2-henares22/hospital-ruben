@@ -1,4 +1,6 @@
-import { Tabla } from "../components/Tabla"
+import { Especialidad } from "../components/Especialidad"
+import { especialidades } from "../domain/especialidades"
+import { IEspecialidad } from "../domain/interfaces"
 
 export const Profesiones = ()=>{
     return(
@@ -6,10 +8,11 @@ export const Profesiones = ()=>{
           <div className="flex justify-center">
             {/* <div className="flex bg-gradient-to-r from-yellow-500 to-yellow-900"> */}
             <div className="flex m-5">
-              <div className="flex"><Tabla apartado="Apartado1" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div>
-              <div className="flex"><Tabla apartado="Apartado2" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div>
-              <div className="flex"><Tabla apartado="Apartado1" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div>
-            </div>                
+              {especialidades.map((especialidad: IEspecialidad)=>(<Especialidad especialidad={especialidad}/>))}
+              {/* <Tabla apartado="Apartado1" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/>
+              <Tabla apartado="Apartado2" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/>
+              <Tabla apartado="Apartado1" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/> */}
+            </div>
           </div>
   
           <div className="flex p-6">

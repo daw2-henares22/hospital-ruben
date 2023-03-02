@@ -1,4 +1,6 @@
 import { Cliente } from "../components/Cliente"
+import { clientes } from "../domain/clientes"
+import { ICliente } from "../domain/interfaces"
 
 export const Clientes = ()=>{
     return(
@@ -16,10 +18,7 @@ export const Clientes = ()=>{
               </div>
             </div>
             <div className="table-row-group">
-                <Cliente id="1" name="Ruben" surname="Henares" password="*****"/>
-                <Cliente id="2" name="Juan" surname="Silva" password="*****"/>
-                <Cliente id="3" name="Marc" surname="Nicolas" password="*****"/>
-                <Cliente id="4" name="Nicolas" surname="Barrio" password="*****"/>
+                {clientes.map((cliente: ICliente)=>(<Cliente cliente={cliente}/>))}
             </div>
             {/* <div className="table-row-group"> 
                 <div className="table-row">
