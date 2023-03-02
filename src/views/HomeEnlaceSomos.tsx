@@ -1,5 +1,5 @@
 import { Medico } from "../components/Medico"
-import { Tabla } from "../components/Tabla"
+import { Tabla } from "../components/Especialidad"
 import { Somos } from "./Somos"
 export const Home =()=>{
     return(
