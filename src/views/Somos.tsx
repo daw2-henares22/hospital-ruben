@@ -16,10 +16,10 @@ export const Somos = ()=>{
           <dl className="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
             <dt className="sr-only">Reviews</dt>
             <dd className="text-indigo-600 flex items-center dark:text-indigo-400">
-              <svg width="24" height="24" fill="none" aria-hidden="true" className="mr-1 stroke-current dark:stroke-indigo-500">
-                <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <svg className="fill-none w-16 h-16 stroke-indigo-500">
+                <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z" className="stroke-2" />
               </svg>
-              <span>4.89 <span className="text-slate-400 font-normal">(128)</span></span>
+              <span className="text-white">4.89 <span className="text-yellow-200 font-normal">(128)</span></span>
             </dd>
             <dt className="sr-only">Location</dt>
             <dd className="flex items-center text-white">
