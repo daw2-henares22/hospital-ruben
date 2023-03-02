@@ -18,14 +18,14 @@ export const Profesiones = ()=>{
           <div className="flex p-6">
             <div className="text-yellow-500">Contacts</div>
             <div>
-              <img className="sm:h-52" src="./src/images/avatar.jpg" alt="hospital"></img>
+              <img className="sm:h-52" src="./public/avatar.jpg" alt="hospital"></img>
               <div className="flex flex-col">
                 <div className="text-white">Andrew Alfred</div>
                 <strong className="text-white">Profesional en autopsia</strong>
               </div>
             </div>
             <div>
-              <img className="sm:h-52 ml-5" src="./src/images/avatar2.jpg" alt="hospital"></img>
+              <img className="sm:h-52 ml-5" src="./public/avatar2.jpg" alt="hospital"></img>
               <div className="flex flex-col">
                 <div className="text-white">Debra Houston</div>
                 <strong className="text-white">Profesional en autopsia</strong>

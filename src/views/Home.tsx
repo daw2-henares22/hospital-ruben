@@ -23,7 +23,7 @@ export const Home =()=>{
           </div>
         </div>
             <div className="flex flex-col">
-              <img className="absolute object-cover opacity-70" src="./src/images/hospital.jpg" alt="hospital"></img>
+              <img className="absolute object-cover opacity-70" src="./public/hospital.jpg" alt="hospital"></img>
               {/* <div className="flex"><Tabla apartado="Apartado1" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div>
               <div className="flex"><Tabla apartado="Apartado2" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div>
               <div className="flex"><Tabla apartado="Apartado1" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div> */}
