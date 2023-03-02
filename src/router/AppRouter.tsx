@@ -4,7 +4,7 @@ import { Profesiones } from "../views/Profesiones"
 import { Trabajo } from "../views/Trabajo"
 import { Clientes } from "../views/Clientes"
 import { Somos } from "../views/Somos"
-import { BuscTrabajos } from "../views/Busctrabajos"
+import { BuscTrabajos } from "../views/BuscTrabajos"
 
 export const mainRoute = '/';
 export const routes ={
