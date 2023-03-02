@@ -1,125 +1,34 @@
+import { Tabla } from "../components/Tabla"
+
 export const Profesiones = ()=>{
     return(
-        <section className="flex justify-center bg-blue-900">
-          <div className="flex bg-yellow-500">
+        <section className="flex flex-col bg-blue-900">
+          <div className="flex justify-center">
             {/* <div className="flex bg-gradient-to-r from-yellow-500 to-yellow-900"> */}
-                
-                    <div className="p-4">
-                      <div className="p-6 rounded-lg border-2 border-gray-300">
-                        <h2 className="text-sm tracking-widest mb-1 font-medium">Apartado1</h2>
-                        <h1 className="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none">Especialistas</h1>
-                        <p className="flex items-center text-gray-600 mb-2">
-                          <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" className="w-3 h-3" viewBox="0 0 24 24">
-                              <path d="M20 6L9 17l-5-5"></path>
-                            </svg>
-                          </span>
-                          Operaciones
-                        </p>
-                        <p className="flex items-center text-gray-600 mb-2">
-                          <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" className="w-3 h-3" viewBox="0 0 24 24">
-                              <path d="M20 6L9 17l-5-5"></path>
-                            </svg>
-                          </span>
-                          Consultas
-                        </p>
-                        <p className="flex items-center text-gray-600 mb-6">
-                          <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" className="w-3 h-3" viewBox="0 0 24 24">
-                              <path d="M20 6L9 17l-5-5"></path>
-                            </svg>
-                          </span>
-                          Terapias
-                        </p>
-                        <button className="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Mas información
-                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-auto" viewBox="0 0 24 24">
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                          </svg>
-                        </button>
-                        <p className="text-xs text-gray-500 mt-3">Derechos de autor Rubén Henares Hidalgo</p>
-                      </div>
-                    </div>
-              
-                
-                <div className="flex px-5">
-                    <div className="p-4">
-                      <div className="p-6 rounded-lg border-2 border-gray-300">
-                        <h2 className="text-sm tracking-widest mb-1 font-medium">Apartado1</h2>
-                        <h1 className="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none">Especialistas</h1>
-                        <p className="flex items-center text-gray-600 mb-2">
-                          <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" className="w-3 h-3" viewBox="0 0 24 24">
-                              <path d="M20 6L9 17l-5-5"></path>
-                            </svg>
-                          </span>
-                          Operaciones
-                        </p>
-                        <p className="flex items-center text-gray-600 mb-2">
-                          <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" className="w-3 h-3" viewBox="0 0 24 24">
-                              <path d="M20 6L9 17l-5-5"></path>
-                            </svg>
-                          </span>
-                          Consultas
-                        </p>
-                        <p className="flex items-center text-gray-600 mb-6">
-                          <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" className="w-3 h-3" viewBox="0 0 24 24">
-                              <path d="M20 6L9 17l-5-5"></path>
-                            </svg>
-                          </span>
-                          Terapias
-                        </p>
-                        <button className="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Mas información
-                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-auto" viewBox="0 0 24 24">
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                          </svg>
-                        </button>
-                        <p className="text-xs text-gray-500 mt-3">Derechos de autor Rubén Henares Hidalgo</p>
-                      </div>
-                    </div>
-                </div>
-
-                <div className="flex px-5">
-                    <div className="p-4">
-                      <div className="p-6 rounded-lg border-2 border-gray-300">
-                        <h2 className="text-sm tracking-widest mb-1 font-medium">Apartado1</h2>
-                        <h1 className="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none">Especialistas</h1>
-                        <p className="flex items-center text-gray-600 mb-2">
-                          <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" className="w-3 h-3" viewBox="0 0 24 24">
-                              <path d="M20 6L9 17l-5-5"></path>
-                            </svg>
-                          </span>
-                          Operaciones
-                        </p>
-                        <p className="flex items-center text-gray-600 mb-2">
-                          <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" className="w-3 h-3" viewBox="0 0 24 24">
-                              <path d="M20 6L9 17l-5-5"></path>
-                            </svg>
-                          </span>
-                          Consultas
-                        </p>
-                        <p className="flex items-center text-gray-600 mb-6">
-                          <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" className="w-3 h-3" viewBox="0 0 24 24">
-                              <path d="M20 6L9 17l-5-5"></path>
-                            </svg>
-                          </span>
-                          Terapias
-                        </p>
-                        <button className="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Mas información
-                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-auto" viewBox="0 0 24 24">
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                          </svg>
-                        </button>
-                        <p className="text-xs text-gray-500 mt-3">Derechos de autor Rubén Henares Hidalgo</p>
-                      </div>
-                    </div>
-                </div>
+            <div className="flex m-5">
+              <div className="flex"><Tabla apartado="Apartado1" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div>
+              <div className="flex"><Tabla apartado="Apartado2" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div>
+              <div className="flex"><Tabla apartado="Apartado1" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div>
+            </div>                
+          </div>
+  
+          <div className="flex p-6">
+            <div className="text-yellow-500">Contacts</div>
+            <div>
+              <img className="sm:h-52" src="./src/images/avatar.jpg" alt="hospital"></img>
+              <div className="flex flex-col">
+                <div className="text-white">Andrew Alfred</div>
+                <strong className="text-white">Profesional en autopsia</strong>
+              </div>
             </div>
+            <div>
+              <img className="sm:h-52 ml-5" src="./src/images/avatar2.jpg" alt="hospital"></img>
+              <div className="flex flex-col">
+                <div className="text-white">Debra Houston</div>
+                <strong className="text-white">Profesional en autopsia</strong>
+              </div>
+            </div>
+          </div>
         </section>
     )
 }

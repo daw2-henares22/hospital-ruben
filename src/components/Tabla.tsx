@@ -38,12 +38,12 @@ export const Tabla = (props: TablaProps)=>{
             </span>
             {props.terapias}
           </p>
-          <button className="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">{props.informacion}
+          <button className="flex items-center mt-auto text-white bg-blue-600 border-0 py-2 px-4 w-full focus:outline-none hover:bg-blue-800 rounded">{props.informacion}
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-auto" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </button>
-          <p className="text-xs text-gray-500 mt-3">{props.derechos}</p>
+          <p className="text-xs text-blue-900 mt-3">{props.derechos}</p>
         </div>
       </div>
     )
