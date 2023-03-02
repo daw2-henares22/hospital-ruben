@@ -13,28 +13,28 @@ export const Somos = ()=>{
             <img src="./src/images/avatar2.jpg" alt="avatar1" className="m-5 hidden w-30 h-30 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy"></img>
             <img src="./src/images/avatar3.jpg" alt="avatar2" className="m-5 hidden w-30 h-30 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy"></img>
           </div>
-          <dl className="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
-            <dt className="sr-only">Reviews</dt>
-            <dd className="text-indigo-600 flex items-center dark:text-indigo-400">
+          <div className="mt-4 text-xs font-medium flex md:mt-2.5 lg:row-start-2">
+            <div className="text-indigo-600 flex items-center dark:text-indigo-400">
               <svg className="fill-none w-16 h-16 stroke-indigo-500">
                 <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z" className="stroke-2" />
               </svg>
-              <span className="text-white">4.89 <span className="text-yellow-200 font-normal">(128)</span></span>
-            </dd>
-            <dt className="sr-only">Location</dt>
-            <dd className="flex items-center text-white">
-              <svg width="2" height="2" aria-hidden="true" fill="currentColor" className="mx-3 text-slate-300">
-                <circle cx="1" cy="1" r="1" />  
+              <span className="h-14 w-16 text-white">4.89 <span className="text-yellow-200 font-normal">(128)</span></span>
+            </div>
+            <div className="flex items-center text-white">
+              <svg fill="currentColor" className="w-1 h-10 mx-2 text-slate-300">
+                <circle cx="1" cy="1" r="1" />
               </svg>
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="mr-1 text-slate-400 dark:text-slate-500" aria-hidden="true">
-                <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
+              <svg className="w-16 h-14 stroke-2 fill-none stroke-yellow-200">
                 <a href="https://www.google.es/maps/place/L'Hospitalet+de+Llobregat,+Barcelona/@41.3578114,2.0944,14z/data=!3m1!4b1!4m6!3m5!1s0x12a498e7672e0317:0x36127a984f4c05d5!8m2!3d41.3661865!4d2.1164942!16zL20vMGp4Nzg?hl=es" target="_blank">
+                  <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
                   <path d="M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
                 </a>
               </svg>
-              L'Hospitalet de Llobregat, Barcelona
-            </dd>
-          </dl>
+              <p className="h-12">
+                L'Hospitalet de Llobregat, Barcelona
+              </p>
+            </div>
+          </div>
           <div className="m-5 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
             <button type="button" className="bg-gradient-to-r from-blue-400 to-blue-900 hover:from-blue-900 hover:to-blue-400 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">{/*<Link to={routes.somos}>Quienes somos</Link>*/}Únete</button>
           </div>
