@@ -2,7 +2,7 @@ export const Home =()=>{
     return(
       
       <section className="bg-blue-900">
-        <img className="bg-[url('./public/hospital.jpg')] p-36 ml-44 absolute opacity-70 bg-cover"></img>
+        <img className="p-36 ml-44 absolute opacity-70" src="./public/hospital.jpg" alt="hospital"></img>
         {/*<section className="bg-gradient-to-r from-blue-500 to-blue-900">*/}
             {/* <img className="flex relative w-500 h-500 object-cover opacity-70" src="./src/images/hospital.jpg" alt="hospital"></img> */}       
          <div className="flex flex-col text-center">

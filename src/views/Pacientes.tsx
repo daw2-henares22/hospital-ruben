@@ -1,8 +1,8 @@
-import { Cliente } from "../components/Cliente"
-import { clientes } from "../domain/clientes"
-import { ICliente } from "../domain/interfaces"
+import { Paciente } from "../components/Paciente"
+import { pacientes } from "../domain/pacientes"
+import { IPaciente } from "../domain/interfaces"
 
-export const Clientes = ()=>{
+export const Pacientes = ()=>{
     return(
         <body className="bg-blue-900">
             <section className="m-5">
@@ -18,7 +18,7 @@ export const Clientes = ()=>{
               </div>
             </div>
             <div className="table-row-group">
-                {clientes.map((cliente: ICliente)=>(<Cliente cliente={cliente}/>))}
+                {pacientes.map((paciente: IPaciente)=>(<Paciente paciente={paciente}/>))}
             </div>
             {/* <div className="table-row-group"> 
                 <div className="table-row">

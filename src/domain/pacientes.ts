@@ -1,6 +1,6 @@
-import { ICliente } from "./interfaces";
+import { IPaciente } from "./interfaces";
 
-export const clientes: ICliente[]=[
+export const pacientes: IPaciente[]=[
     {
         id: '1',
         name: 'Ruben',

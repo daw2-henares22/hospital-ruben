@@ -9,7 +9,10 @@ export const especialidades: IEspecialidad[]=[
         terapias: 'terapias',
         informacion: 'Mas información',
         derechos: 'Derechos de autor Rubén Henares Hidalgo',
-        medicos: []
+        // medicos: [
+        //     // id: 'Ruben',
+            
+        // ]
     },
     {
         apartado: 'Apartado2',
@@ -19,7 +22,7 @@ export const especialidades: IEspecialidad[]=[
         terapias: 'terapias',
         informacion: 'Mas información',
         derechos: 'Derechos de autor Rubén Henares Hidalgo',
-        medicos: []
+        // medicos: []
     },
     {
         apartado: 'Apartado3',
@@ -29,6 +32,6 @@ export const especialidades: IEspecialidad[]=[
         terapias: 'terapias',
         informacion: 'Mas información',
         derechos: 'Derechos de autor Rubén Henares Hidalgo',
-        medicos: []
+        // medicos: []
     }
 ]

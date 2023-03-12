@@ -1,23 +1,39 @@
 export interface IEspecialidad{
-    apartado: string,
-    titulo: string,
-    operaciones: string,
-    consultas: string,
-    terapias: string,
-    informacion: string,
-    derechos: string;
-    medicos: IMedico[];
+    apartado: String,
+    titulo: String,
+    operaciones: String,
+    consultas: String,
+    terapias: String,
+    informacion: String,
+    derechos: String;
+    // medicos: IMedico[
+    //     {
+    //         id: String,
+            
+    //     }
+    // ];
 }
 
-export interface ICliente{
-    id: string;
-    name: string;
-    surname: string;
-    password: string;
+export interface IPaciente{
+    id: String;
+    name: String;
+    surname: String;
+    password: String;
 }
 
 export interface IMedico{
-    avatar: string;
-    nombre: string;
-    profesion: string;
+    avatar: String;
+    nombre: String;
+    profesion: String;
+}
+
+export interface IBuscaTrabajo{
+    nombre: String,
+    apellido1: String,
+    apellido2: String,
+    tel: number,
+    // medico:[
+    //     id: String,
+        
+    // ]
 }
