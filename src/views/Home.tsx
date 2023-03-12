@@ -2,13 +2,16 @@ export const Home =()=>{
     return(
       
       <section className="bg-blue-900">
-        <img className="bg-[url('./public/hospital.jpg')] p-36 ml-44 absolute opacity-70 bg-cover"></img>
+        <div className="container">
+          <div className="container mx-auto">
+          <img className="bg-[url('./public/hospital.jpg')] p-36 ml-44 absolute bg-cover"></img>
         {/*<section className="bg-gradient-to-r from-blue-500 to-blue-900">*/}
             {/* <img className="flex relative w-500 h-500 object-cover opacity-70" src="./src/images/hospital.jpg" alt="hospital"></img> */}       
-         <div className="flex flex-col text-center">
+         <div className="container flex flex-col text-center">
            <h1 className="m-5 text-6xl text-white">Hospital Rubén</h1>
            
            <p className="px-5 py-5 text-white text-2xl">Medicos de Barcelona</p>
+          </div>
            
            {/* <div className="flex mx-auto border-2 border-indigo-500 rounded overflow-hidden mt-6">
              <button className="py-1 px-4 bg-indigo-500 text-white focus:outline-none">Somos</button>
@@ -20,11 +23,12 @@ export const Home =()=>{
              </button>
            </div> */}
          </div>
-           
-             {/* <div className="flex"><Tabla apartado="Apartado1" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div>
+         <div className="container mx-auto">
+            {/* <div className="flex"><Tabla apartado="Apartado1" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div>
              <div className="flex"><Tabla apartado="Apartado2" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div>
              <div className="flex"><Tabla apartado="Apartado1" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div> */}
-            <div className="text-center text-yellow-500 grid grid-cols-3 gap-4">
+            <div className="ml-4 mt-44 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit vitae tempora nobis aliquid fugit maxime odio similique aperiam, tempore sapiente accusantium qui cupiditate dolor magnam quasi, libero necessitatibus nulla nam?</div>
+            <div className="mt-44 text-center text-yellow-500 grid grid-cols-3 gap-4">
              <div className="text-2xl">Hola</div>
              <div>01</div>
              <div>01</div>
@@ -37,6 +41,9 @@ export const Home =()=>{
              <div>01</div>
             </div>
             <div></div>
+         </div>
+        </div>
+        
      </section>
     )
 }
