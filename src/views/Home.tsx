@@ -26,8 +26,8 @@ export const Home =()=>{
              <div className="flex"><Tabla apartado="Apartado2" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div>
              <div className="flex"><Tabla apartado="Apartado1" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div> */}
             <div className="mt-80 text-white text-center text-xl">Hospital Rubén: Trabajamos lo mas rapido posible para los pacientes tanto dentro como fuera con ambulancias.</div>
-            <div className="mt-28 text-center text-yellow-500 text-3xl">Personal de Salud</div>
-            <div className="mt-10 text-center text-yellow-500 grid grid-cols-3 gap-4">
+            <div className="mt-28 text-center font-bold text-yellow-500 text-3xl">Personal de Salud</div>
+            <div className="mt-10 text-center font-semibold text-yellow-500 grid grid-cols-3 gap-4">
              <div className="text-2xl">Medicos</div>
              <div className="text-2xl">Bioanalista</div>
              <div className="text-2xl">Enfermeros</div>
