@@ -44,7 +44,7 @@ export const Home =()=>{
              <div className="text-2xl">Medicos</div>
              <div className="text-2xl">Bioanalista</div>
              <div className="text-2xl">Enfermeros</div>
-             <button onClick={()=> setShowPopup(true)}><img className="bg-center bg-[url('./public/medicos.jpg')] p-36 ml-28 bg-cover"></img></button>
+             <button onClick={()=> setShowPopup(true)}><img className="bg-center bg-[url('/public/medicos.jpg')] p-36 ml-28 bg-cover"></img></button>
               <Popup visible={showPopup} onClose={() => setShowPopup(false)}>
                <div className="p-6">
                  <h3 className="text-xl font-semibold text-gray-900 mb-5">
