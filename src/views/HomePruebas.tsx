@@ -65,7 +65,8 @@ export const Home =()=>{
 
 
 
-
+<button onClick={()=> setShowPopup(true)}></button>
+             <img trigger={showPopup} setTrigger={setShowPopup} className="bg-center bg-[url('./public/medicos.jpg')] p-36 ml-28 bg-cover">Este es el texto del popup</img>
 
 
 

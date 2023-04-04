@@ -37,3 +37,7 @@ export interface IBuscaTrabajo{
         
     // ]
 }
+
+export interface IPopup{}
+
+export interface IModal{}

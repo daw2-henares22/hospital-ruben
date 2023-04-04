@@ -8901,8 +8901,8 @@ const Home = () => {
     /* @__PURE__ */ jsx("img", { className: "bg-center w-full bg-[url('./public/hospital.jpg')] p-36 absolute bg-cover" }),
     /* @__PURE__ */ jsxs("div", { className: "container mx-auto", children: [
       /* @__PURE__ */ jsx("div", { className: "mt-80 text-white text-center text-xl", children: "Hospital Rubén: Trabajamos lo mas rapido posible para los pacientes tanto dentro como fuera con ambulancias." }),
-      /* @__PURE__ */ jsx("div", { className: "mt-28 text-center text-yellow-500 text-3xl", children: "Personal de Salud" }),
-      /* @__PURE__ */ jsxs("div", { className: "mt-10 text-center text-yellow-500 grid grid-cols-3 gap-4", children: [
+      /* @__PURE__ */ jsx("div", { className: "mt-28 text-center font-bold text-yellow-500 text-3xl", children: "Personal de Salud" }),
+      /* @__PURE__ */ jsxs("div", { className: "mt-10 text-center font-semibold text-yellow-500 grid grid-cols-3 gap-4", children: [
         /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Medicos" }),
         /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Bioanalista" }),
         /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Enfermeros" }),
