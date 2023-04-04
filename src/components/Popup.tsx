@@ -15,7 +15,7 @@ export default function Popup({ visible, onClose, children}){
              
              <div className="flex flex-col w-[600px]">
                 {/* <button className="text-white text-xl place-self-end" onClick={() => onClose()}>X</button> */}
-                <div className="bg-white p-2 rounded">{children}</div>
+                <div>{children}</div>
             </div>
         </div>
     )

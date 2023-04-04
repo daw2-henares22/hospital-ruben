@@ -5,6 +5,15 @@ export const Home =()=>{
   const [showPopup, setShowPopup] = useState(false)
   const [showPopup2, setShowPopup2] = useState(false)
   const [showPopup3, setShowPopup3] = useState(false)
+  const [showPopup4, setShowPopup4] = useState(false)
+  const [showPopup5, setShowPopup5] = useState(false)
+  const [showPopup6, setShowPopup6] = useState(false)
+  const [showPopup7, setShowPopup7] = useState(false)
+  const [showPopup8, setShowPopup8] = useState(false)
+  const [showPopup9, setShowPopup9] = useState(false)
+  const [showPopup10, setShowPopup10] = useState(false)
+  const [showPopup11, setShowPopup11] = useState(false)
+  const [showPopup12, setShowPopup12] = useState(false)
   
 
 
@@ -44,9 +53,9 @@ export const Home =()=>{
              <div className="text-2xl">Medicos</div>
              <div className="text-2xl">Bioanalista</div>
              <div className="text-2xl">Enfermeros</div>
-             <button onClick={()=> setShowPopup(true)}><img className="bg-center bg-[url('/public/medicos.jpg')] p-36 ml-28 bg-cover"></img></button>
+             <button onClick={()=> setShowPopup(true)}><img className="bg-center bg-[url('./public/medicos.jpg')] p-36 ml-28 bg-cover"></img></button>
               <Popup visible={showPopup} onClose={() => setShowPopup(false)}>
-               <div className="p-6">
+               <div className="bg-white rounded p-6">
                  <h3 className="text-xl font-semibold text-gray-900 mb-5">
                    Medicos
                  </h3>
@@ -58,7 +67,7 @@ export const Home =()=>{
               
              <button onClick={()=> setShowPopup2(true)}><img className="bg-center bg-[url('./public/bioanalista.jpg')] p-36 ml-28 bg-cover"></img></button>
               <Popup visible={showPopup2} onClose={() => setShowPopup2(false)}>
-               <div className="p-6">
+               <div className="bg-white rounded p-6">
                  <h3 className="text-xl font-semibold text-gray-900 mb-5">
                    Bioanalistas
                  </h3>
@@ -67,13 +76,53 @@ export const Home =()=>{
                  </p>
                </div>
               </Popup>
-             <button onClick={()=> setShowPopup(true)}><img trigger={showPopup} setTrigger={setShowPopup} className="bg-center bg-[url('./public/enfermera.jpg')] p-36 ml-28 bg-cover"></img></button>
+             <button onClick={()=> setShowPopup3(true)}><img className="bg-center bg-[url('./public/enfermera.jpg')] p-36 ml-28 bg-cover"></img></button>
+              <Popup visible={showPopup3} onClose={() => setShowPopup3(false)}>
+               <div className="bg-white rounded p-6">
+                 <h3 className="text-xl font-semibold text-gray-900 mb-5">
+                   Enfermeros
+                 </h3>
+                 <p className="mb-5 font-normal text-gray-500">
+                   Los Enfermeros hacen cosas
+                 </p>
+               </div>
+              </Popup>
              <div className="text-2xl">Tecnico en Radiologia</div>
              <div className="text-2xl">Camillero</div>
              <div className="text-2xl">Paramédicos</div>
-             <button onClick={()=> setShowPopup(true)}><img trigger={showPopup} setTrigger={setShowPopup} className="bg-center bg-[url('./public/tecnicoRadiologia.jpg')] p-36 ml-28 bg-cover"></img></button>
-             <button onClick={()=> setShowPopup(true)}><img trigger={showPopup} setTrigger={setShowPopup} className="bg-center bg-[url('./public/camillero.jpg')] p-36 ml-28 bg-cover"></img></button>
-             <button onClick={()=> setShowPopup(true)}><img trigger={showPopup} setTrigger={setShowPopup} className="bg-center bg-[url('./public/paramedicos.jpg')] p-36 ml-28 bg-cover"></img></button>
+             <button onClick={()=> setShowPopup4(true)}><img className="bg-center bg-[url('./public/tecnicoRadiologia.jpg')] p-36 ml-28 bg-cover"></img></button>
+              <Popup visible={showPopup4} onClose={() => setShowPopup4(false)}>
+               <div className="bg-white rounded p-6">
+                 <h3 className="text-xl font-semibold text-gray-900 mb-5">
+                   Tecnico en Radiologia
+                 </h3>
+                 <p className="mb-5 font-normal text-gray-500">
+                   Los Tecnicos en Radiologia hacen cosas
+                 </p>
+               </div>
+              </Popup>
+             <button onClick={()=> setShowPopup5(true)}><img className="bg-center bg-[url('./public/camillero.jpg')] p-36 ml-28 bg-cover"></img></button>
+              <Popup visible={showPopup5} onClose={() => setShowPopup5(false)}>
+               <div className="bg-white rounded p-6">
+                 <h3 className="text-xl font-semibold text-gray-900 mb-5">
+                   Camillero
+                 </h3>
+                 <p className="mb-5 font-normal text-gray-500">
+                   Los Camilleros se encargan de llevar a los pacientes todos los lugares.
+                 </p>
+               </div>
+              </Popup>
+             <button onClick={()=> setShowPopup6(true)}><img className="bg-center bg-[url('./public/paramedicos.jpg')] p-36 ml-28 bg-cover"></img></button>
+              <Popup visible={showPopup6} onClose={() => setShowPopup6(false)}>
+               <div className="bg-white rounded p-6">
+                 <h3 className="text-xl font-semibold text-gray-900 mb-5">
+                   Paramédico
+                 </h3>
+                 <p className="mb-5 font-normal text-gray-500">
+                   Los Paramédicos hacen cosas
+                 </p>
+               </div>
+              </Popup>
             </div>
 
             <div className="mt-28 text-center font-bold text-yellow-500 text-3xl">Personal de Administrativo</div>
@@ -81,15 +130,75 @@ export const Home =()=>{
              <div className="text-2xl">Contadores</div>
              <div className="text-2xl">Administradores</div>
              <div className="text-2xl">Relacionista Industrial</div>
-             <button onClick={()=> setShowPopup(true)}><img trigger={showPopup} setTrigger={setShowPopup} className="bg-center bg-[url('./public/contadores.jpg')] p-36 ml-28 bg-cover"></img></button>
-             <button onClick={()=> setShowPopup(true)}><img trigger={showPopup} setTrigger={setShowPopup} className="bg-center bg-[url('./public/administradores.jpg')] p-36 ml-28 bg-cover"></img></button>
-             <button onClick={()=> setShowPopup(true)}><img trigger={showPopup} setTrigger={setShowPopup} className="bg-center bg-[url('./public/relacionistaIndustrial.jpg')] p-36 ml-28 bg-cover"></img></button>
+             <button onClick={()=> setShowPopup7(true)}><img className="bg-center bg-[url('./public/contadores.jpg')] p-36 ml-28 bg-cover"></img></button>
+              <Popup visible={showPopup7} onClose={() => setShowPopup7(false)}>
+               <div className="bg-white rounded p-6">
+                 <h3 className="text-xl font-semibold text-gray-900 mb-5">
+                   Contadores
+                 </h3>
+                 <p className="mb-5 font-normal text-gray-500">
+                   Los contadores hacen cosas
+                 </p>
+               </div>
+              </Popup>
+             <button onClick={()=> setShowPopup8(true)}><img className="bg-center bg-[url('./public/administradores.jpg')] p-36 ml-28 bg-cover"></img></button>
+              <Popup visible={showPopup8} onClose={() => setShowPopup8(false)}>
+               <div className="bg-white rounded p-6">
+                 <h3 className="text-xl font-semibold text-gray-900 mb-5">
+                   Administradores
+                 </h3>
+                 <p className="mb-5 font-normal text-gray-500">
+                   Los Administradores hacen cosas
+                 </p>
+               </div>
+              </Popup>
+             <button onClick={()=> setShowPopup9(true)}><img className="bg-center bg-[url('./public/relacionistaIndustrial.jpg')] p-36 ml-28 bg-cover"></img></button>
+              <Popup visible={showPopup9} onClose={() => setShowPopup9(false)}>
+               <div className="bg-white rounded p-6">
+                 <h3 className="text-xl font-semibold text-gray-900 mb-5">
+                   Tecnico en Radiologia
+                 </h3>
+                 <p className="mb-5 font-normal text-gray-500">
+                   Los Tecnicos en Radiologia hacen cosas
+                 </p>
+               </div>
+              </Popup>
              <div className="text-2xl">Limpieza</div>
              <div className="text-2xl">Chofer</div>
              <div className="text-2xl">Sanitarios</div>
-             <button onClick={()=> setShowPopup(true)}><img trigger={showPopup} setTrigger={setShowPopup} className="mb-10 bg-center bg-[url('./public/limpieza.jpg')] p-36 ml-28 bg-cover"></img></button>
-             <button onClick={()=> setShowPopup(true)}><img trigger={showPopup} setTrigger={setShowPopup} className="mb-10 bg-center bg-[url('./public/chofer.jpg')] p-36 ml-28 bg-cover"></img></button>
-             <button onClick={()=> setShowPopup(true)}><img trigger={showPopup} setTrigger={setShowPopup} className="mb-10 bg-center bg-[url('./public/sanitarios.jpg')] p-36 ml-28 bg-cover"></img></button>
+             <button onClick={()=> setShowPopup10(true)}><img className="mb-10 bg-center bg-[url('./public/limpieza.jpg')] p-36 ml-28 bg-cover"></img></button>
+             <Popup visible={showPopup10} onClose={() => setShowPopup10(false)}>
+               <div className="bg-white rounded p-6">
+                 <h3 className="text-xl font-semibold text-gray-900 mb-5">
+                   Limpieza
+                 </h3>
+                 <p className="mb-5 font-normal text-gray-500">
+                   Los Limpiadores trabajan en todo tipo de suciedad.
+                 </p>
+               </div>
+              </Popup>
+             <button onClick={()=> setShowPopup11(true)}><img className="mb-10 bg-center bg-[url('./public/chofer.jpg')] p-36 ml-28 bg-cover"></img></button>
+              <Popup visible={showPopup11} onClose={() => setShowPopup11(false)}>
+               <div className="bg-white rounded p-6">
+                 <h3 className="text-xl font-semibold text-gray-900 mb-5">
+                   Chofer
+                 </h3>
+                 <p className="mb-5 font-normal text-gray-500">
+                   Los Chofer se encargan de llevar a los primeros auxileos a sus destinos.
+                 </p>
+               </div>
+              </Popup>
+             <button onClick={()=> setShowPopup12(true)}><img className="mb-10 bg-center bg-[url('./public/sanitarios.jpg')] p-36 ml-28 bg-cover"></img></button>
+              <Popup visible={showPopup12} onClose={() => setShowPopup12(false)}>
+               <div className="bg-white rounded p-6">
+                 <h3 className="text-xl font-semibold text-gray-900 mb-5">
+                   Sanitarios
+                 </h3>
+                 <p className="mb-5 font-normal text-gray-500">
+                   Los Sanitarios se encargan de preocuparse por los pacientes 24h.
+                 </p>
+               </div>
+              </Popup>
             </div>
          </div>
         

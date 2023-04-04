@@ -1,6 +1,13 @@
 // import { routes } from '../router'
+import { useState } from "react"
+import Popup from "../components/Popup"
+
 
 export const Somos = ()=>{
+  const [showPopup, setShowPopup] = useState(false)
+
+  const handleOnClose = ()=> setShowPopup(false)
+  
     return(
       <div className=" bg-blue-900">
         <div className="bg-blue-500 rounded-lg mx-auto grid grid-cols-1 lg:max-w-5xl">
@@ -36,7 +43,55 @@ export const Somos = ()=>{
             </div>
           </div>
           <div className="m-5 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
-            <button type="button" className="bg-gradient-to-r from-blue-400 to-blue-900 hover:from-blue-900 hover:to-blue-400 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">{/*<Link to={routes.somos}>Quienes somos</Link>*/}Únete</button>
+            <button onClick={()=> setShowPopup(true)} type="button" className="bg-gradient-to-r from-blue-400 to-blue-900 hover:from-blue-900 hover:to-blue-400 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">{/*<Link to={routes.somos}>Quienes somos</Link>*/}Únete</button>
+              <Popup visible={showPopup} onClose={() => setShowPopup(false)}>
+              <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center">
+                  <div className="bg-white rounded p-2 w-72">
+                    <h1 className="font-semibold text-center text-xl text-gray-700">
+                      Welcome back
+                    </h1>
+                    <p className="text-center text-gray-700 mb-5">
+                      Sign in
+                    </p>
+                    <div className="flex flex-col">
+                      <input type="text" className="border border-gray-700 p-2 rounded mb-5" placeholder="email@example.com"/>
+                      <input type="text" className="border border-gray-700 p-2 rounded mb-5" placeholder="*****"/>
+                    </div>
+                    <div className="text-center">
+                      <button className="px-5 py-2 bg-gray-700 text-white rounded">
+                        Sign in
+                      </button>
+                    </div>
+                  </div>
+                  <div className="bg-white p-2 rounded">
+                    <button onClick={()=> setShowPopup(false)}>X</button>
+                  </div>
+                </div>
+
+
+
+{/* 
+                <div className=" backdrop-blur-sm flex justify-center items-center">
+                <div className="p-2">
+                  <h1 className="font-semibold text-center text-xl text-gray-700">
+                    Welcome back
+                  </h1>
+                  <p className="mb-5 text-center text-gray-500">
+                    Sign in
+                  </p>
+                  <div className="flex flex-col">
+                    <input type="text" className="border border-gray-700 p-2 rounded mb-5" placeholder="email@example.com"/>
+                    <input type="text" className="border border-gray-700 p-2 rounded mb-5" placeholder="*****"/>
+                  </div>
+                  <div className="text-center">
+                    <button className="px-5 py-2 bg-gray-700 text-white rounded">
+                      Sign in
+                    </button>
+                  </div>
+               </div>
+                </div> */}
+                
+              </Popup>
           </div>
           <p className="m-5 text-white mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1">
             Somos trabajadores de este hospital con años de practicas y conocimiento. Venimos preparados con estudios universitarios para dar lo mejor a nuestros pacientos... Es más eso es lo que queremos.
