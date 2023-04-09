@@ -1,5 +1,8 @@
 import { useState } from "react"
+import { PersonalSalut } from "../components/PersonalSalut"
 import Popup from "../components/Popup"
+import { personalSaluts } from "../domain/personalSaluts"
+import { IPersonalSalut } from "../domain/interfaces"
 
 export const Home =()=>{
   const [showPopup, setShowPopup] = useState(false)
@@ -50,7 +53,8 @@ export const Home =()=>{
             <div className="mt-80 text-white text-center text-xl">Hospital Rubén: Trabajamos lo mas rapido posible para los pacientes tanto dentro como fuera con ambulancias.</div>
             <div className="mt-28 text-center font-bold text-yellow-500 text-3xl">Personal de Salud</div>
             <div className="mt-10 text-center font-semibold text-yellow-500 grid grid-cols-3 gap-4">
-             <div className="text-2xl">Medicos</div>
+              {personalSaluts.map((personalSalut: IPersonalSalut)=>(<PersonalSalut personalSalut={personalSalut}/>))}
+             {/* <div className="text-2xl">Medicos</div>
              <div className="text-2xl">Bioanalista</div>
              <div className="text-2xl">Enfermeros</div>
              <button onClick={()=> setShowPopup(true)}><img className="bg-center bg-[url('./public/medicos.jpg')] p-36 ml-28 bg-cover"></img></button>
@@ -198,7 +202,7 @@ export const Home =()=>{
                    Los Sanitarios se encargan de preocuparse por los pacientes 24h.
                  </p>
                </div>
-              </Popup>
+              </Popup> */}
             </div>
          </div>
         

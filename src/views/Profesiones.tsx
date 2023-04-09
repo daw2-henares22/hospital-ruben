@@ -2,6 +2,10 @@ import { Especialidad } from "../components/Especialidad"
 import { especialidades } from "../domain/especialidades"
 import { IEspecialidad } from "../domain/interfaces"
 
+import { Contacto } from "../components/Contacto"
+import { contactos } from "../domain/contactos"
+import { IContacto } from "../domain/interfaces"
+
 export const Profesiones = ()=>{
     return(
         <section className="flex flex-col bg-blue-900">
@@ -16,7 +20,8 @@ export const Profesiones = ()=>{
           </div>
   
           <div className="flex p-6">
-            <div className="text-yellow-500">Contacts</div>
+              {contactos.map((contacto: IContacto)=>(<Contacto contacto={contacto}/>))}
+            {/* <div className="text-yellow-500">Contacts</div>
             <div>
               <img className="sm:h-52" src="./public/avatar.jpg" alt="hospital"></img>
               <div className="flex flex-col">
@@ -30,7 +35,7 @@ export const Profesiones = ()=>{
                 <div className="text-white">Debra Houston</div>
                 <strong className="text-white">Profesional en autopsia</strong>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
     )

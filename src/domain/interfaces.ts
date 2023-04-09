@@ -41,3 +41,15 @@ export interface IBuscaTrabajo{
 export interface IPopup{}
 
 export interface IModal{}
+
+export interface IPersonalSalut{
+    nombre: String;
+    imagen: String;
+    descripcion: String;
+}
+
+export interface IContacto{
+    img: String;
+    nombre: String;
+    profesion: String;
+}
