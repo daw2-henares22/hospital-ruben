@@ -1,7 +1,7 @@
 import { IPersonalSalut } from "../domain/interfaces"
 import { useState } from "react"
 import Popup from "./Popup"
-import devAvatar from '/public/medicos.jpg';
+import devAvatar from '/medicos.jpg';
 
 export interface PersonalSalutProps{
     personalSalut: IPersonalSalut
