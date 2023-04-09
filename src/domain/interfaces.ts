@@ -48,6 +48,12 @@ export interface IPersonalSalut{
     descripcion: String;
 }
 
+export interface IPersonalAdministrativo{
+    nombre: String;
+    imagen: String;
+    descripcion: String;
+}
+
 export interface IContacto{
     img: String;
     nombre: String;

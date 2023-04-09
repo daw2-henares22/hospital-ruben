@@ -4,6 +4,10 @@ import Popup from "../components/Popup"
 import { personalSaluts } from "../domain/personalSaluts"
 import { IPersonalSalut } from "../domain/interfaces"
 
+import { PersonalAdministrativo } from "../components/PersonalAdministrativo"
+import { personalAdministrativos } from "../domain/personalAdministrativo"
+import { IPersonalAdministrativo } from "../domain/interfaces"
+
 export const Home =()=>{
   const [showPopup, setShowPopup] = useState(false)
   const [showPopup2, setShowPopup2] = useState(false)
@@ -54,6 +58,11 @@ export const Home =()=>{
             <div className="mt-28 text-center font-bold text-yellow-500 text-3xl">Personal de Salud</div>
             <div className="mt-10 text-center font-semibold text-yellow-500 grid grid-cols-3 gap-4">
               {personalSaluts.map((personalSalut: IPersonalSalut)=>(<PersonalSalut personalSalut={personalSalut}/>))}
+            </div>
+            
+            <div className="mt-28 text-center font-bold text-yellow-500 text-3xl">Personal de Administracion</div>  
+            <div className="mt-10 text-center font-semibold text-yellow-500 grid grid-cols-3 gap-4">
+              {personalAdministrativos.map((personalAdministrativo: IPersonalAdministrativo)=>(<PersonalAdministrativo personalAdministrativo={personalAdministrativo}/>))}
              {/* <div className="text-2xl">Medicos</div>
              <div className="text-2xl">Bioanalista</div>
              <div className="text-2xl">Enfermeros</div>
@@ -127,8 +136,9 @@ export const Home =()=>{
                  </p>
                </div>
               </Popup>
-            </div>
-
+            </div>*/}
+            
+             {/*
             <div className="mt-28 text-center font-bold text-yellow-500 text-3xl">Personal de Administrativo</div>
             <div className="mt-10 text-center font-semibold text-yellow-500 grid grid-cols-3 gap-4">
              <div className="text-2xl">Contadores</div>
