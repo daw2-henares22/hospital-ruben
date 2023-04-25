@@ -59,3 +59,8 @@ export interface IContacto{
     nombre: String;
     profesion: String;
 }
+export interface IContactoCopy{
+    img: String;
+    nombre: String;
+    profesion: String;
+}

@@ -8892,6 +8892,132 @@ function useLinkClickHandler(to, _temp) {
   }, [location, navigate, path, replaceProp, state, target, to, preventScrollReset, relative]);
 }
 const App$1 = "";
+function Popup({ visible, onClose, children }) {
+  const handleOnClose = (e) => {
+    if (e.target.id === "container")
+      onClose();
+  };
+  if (!visible)
+    return null;
+  return /* @__PURE__ */ jsx("div", { id: "container", onClick: handleOnClose, className: "fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center", children: /* @__PURE__ */ jsx("div", { className: "flex flex-col w-[600px]", children: /* @__PURE__ */ jsx("div", { children }) }) });
+}
+const imgMedico = "" + new URL("../medicos.jpg", import.meta.url).href;
+const PersonalSalut = (props) => {
+  const [showPopup, setShowPopup] = reactExports.useState(false);
+  return /* @__PURE__ */ jsxs("div", { children: [
+    /* @__PURE__ */ jsx("div", { className: "text-2xl pb-3", children: props.personalSalut.nombre }),
+    /* @__PURE__ */ jsx("button", { className: "ease-out duration-300", onClick: () => setShowPopup(true), children: /* @__PURE__ */ jsx("img", { src: imgMedico, alt: "medicos", className: "hover:scale-x-105 hover:scale-y-105 transition duration-150 w-80 rounded bg-cover" }) }),
+    /* @__PURE__ */ jsx(Popup, { visible: showPopup, onClose: () => setShowPopup(false), children: /* @__PURE__ */ jsxs("div", { className: "bg-white rounded p-6", children: [
+      /* @__PURE__ */ jsx("h3", { className: "text-xl font-semibold text-gray-900 mb-5", children: props.personalSalut.nombre }),
+      /* @__PURE__ */ jsx("p", { className: "mb-5 font-normal text-gray-500", children: props.personalSalut.descripcion })
+    ] }) })
+  ] });
+};
+const personalSaluts = [
+  {
+    nombre: "Medico",
+    imagen: "./public/medicos.jpg",
+    descripcion: "Los Medicos hacen cosas"
+  },
+  {
+    nombre: "Bioanalista",
+    imagen: "",
+    descripcion: "Los Bioanalista hacen cosas"
+  },
+  {
+    nombre: "Enfermero",
+    imagen: "",
+    descripcion: "Los Enfermeros hacen cosas"
+  },
+  {
+    nombre: "Tecnico en Radiologia",
+    imagen: "",
+    descripcion: "Los Tecnicos en Radiologia hacen cosas"
+  },
+  {
+    nombre: "Camillero",
+    imagen: "",
+    descripcion: "Los Camilleros se encargan de llevar a los pacientes todos los lugares."
+  },
+  {
+    nombre: "Paramédico",
+    imagen: "",
+    descripcion: "Los Paramédicos hacen cosas"
+  },
+  {
+    nombre: "Contador",
+    imagen: "",
+    descripcion: "Los Contadores hacen cosas"
+  },
+  {
+    nombre: "Administrador",
+    imagen: "",
+    descripcion: "Los Administradores hacen cosas"
+  },
+  {
+    nombre: "Relacionista Industrial",
+    imagen: "",
+    descripcion: "Los Relacionistas Industriales hacen cosas"
+  },
+  {
+    nombre: "Limpieza",
+    imagen: "",
+    descripcion: "Los de la Limpieza hacen cosas"
+  },
+  {
+    nombre: "Chofer",
+    imagen: "",
+    descripcion: "Los Chofers se encargan de llevar a los primeros auxileos a sus destinos"
+  },
+  {
+    nombre: "Sanitario",
+    imagen: "",
+    descripcion: "Los Sanitarios se encargan de preocuparse por los pacientes, las 24h."
+  }
+];
+const PersonalAdministrativo = (props) => {
+  const [showPopup, setShowPopup] = reactExports.useState(false);
+  return /* @__PURE__ */ jsxs("div", { children: [
+    /* @__PURE__ */ jsx("div", { className: "text-2xl pb-3", children: props.personalAdministrativo.nombre }),
+    /* @__PURE__ */ jsx("button", { className: "ease-out duration-300", onClick: () => setShowPopup(true), children: /* @__PURE__ */ jsx("img", { src: imgMedico, alt: "medicos", className: "hover:scale-x-105 hover:scale-y-105 transition duration-150 w-80 rounded bg-cover" }) }),
+    /* @__PURE__ */ jsx(Popup, { visible: showPopup, onClose: () => setShowPopup(false), children: /* @__PURE__ */ jsxs("div", { className: "bg-white rounded p-6", children: [
+      /* @__PURE__ */ jsx("h3", { className: "text-xl font-semibold text-gray-900 mb-5", children: props.personalAdministrativo.nombre }),
+      /* @__PURE__ */ jsx("p", { className: "mb-5 font-normal text-gray-500", children: props.personalAdministrativo.descripcion })
+    ] }) })
+  ] });
+};
+const personalAdministrativos = [
+  {
+    nombre: "Contador",
+    imagen: "./public/medicos.jpg",
+    descripcion: "Los Contadores hacen cosas"
+  },
+  {
+    nombre: "Administrador",
+    imagen: "",
+    descripcion: "Los Administradores hacen cosas"
+  },
+  {
+    nombre: "Relacionista industrial",
+    imagen: "",
+    descripcion: "Los Relacionistas industriales hacen cosas"
+  },
+  {
+    nombre: "Limpieza",
+    imagen: "",
+    descripcion: "Los Limpiadores trabajan en todo tipo de suciedad."
+  },
+  {
+    nombre: "Chofer",
+    imagen: "",
+    descripcion: "Los Chofer se encargan de llevar a los primeros auxileos a sus destinos."
+  },
+  {
+    nombre: "Sanitarios",
+    imagen: "",
+    descripcion: "Los Sanitarios se encargan de preocuparse por los pacientes 24h."
+  }
+];
 const Home = () => {
   return /* @__PURE__ */ jsxs("section", { className: "bg-blue-900", children: [
     /* @__PURE__ */ jsxs("div", { className: "flex flex-col text-center", children: [
@@ -8902,42 +9028,16 @@ const Home = () => {
     /* @__PURE__ */ jsxs("div", { className: "container mx-auto", children: [
       /* @__PURE__ */ jsx("div", { className: "mt-80 text-white text-center text-xl", children: "Hospital Rubén: Trabajamos lo mas rapido posible para los pacientes tanto dentro como fuera con ambulancias." }),
       /* @__PURE__ */ jsx("div", { className: "mt-28 text-center font-bold text-yellow-500 text-3xl", children: "Personal de Salud" }),
-      /* @__PURE__ */ jsxs("div", { className: "mt-10 text-center font-semibold text-yellow-500 grid grid-cols-3 gap-4", children: [
-        /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Medicos" }),
-        /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Bioanalista" }),
-        /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Enfermeros" }),
-        /* @__PURE__ */ jsx("img", { className: "bg-center bg-[url('./public/medicos.jpg')] p-36 ml-28 bg-cover" }),
-        /* @__PURE__ */ jsx("img", { className: "bg-center bg-[url('./public/bioanalista.jpg')] p-36 ml-28 bg-cover" }),
-        /* @__PURE__ */ jsx("img", { className: "bg-center bg-[url('./public/enfermera.jpg')] p-36 ml-28 bg-cover" }),
-        /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Tecnico en Radiologia" }),
-        /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Camillero" }),
-        /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Paramédicos" }),
-        /* @__PURE__ */ jsx("img", { className: "bg-center bg-[url('./public/tecnicoRadiologia.jpg')] p-36 ml-28 bg-cover" }),
-        /* @__PURE__ */ jsx("img", { className: "bg-center bg-[url('./public/camillero.jpg')] p-36 ml-28 bg-cover" }),
-        /* @__PURE__ */ jsx("img", { className: "bg-center bg-[url('./public/paramedicos.jpg')] p-36 ml-28 bg-cover" })
-      ] }),
-      /* @__PURE__ */ jsx("div", { className: "mt-28 text-center font-bold text-yellow-500 text-3xl", children: "Personal de Administrativo" }),
-      /* @__PURE__ */ jsxs("div", { className: "mt-10 text-center font-semibold text-yellow-500 grid grid-cols-3 gap-4", children: [
-        /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Contadores" }),
-        /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Administradores" }),
-        /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Relacionista Industrial" }),
-        /* @__PURE__ */ jsx("img", { className: "bg-center bg-[url('./public/contadores.jpg')] p-36 ml-28 bg-cover" }),
-        /* @__PURE__ */ jsx("img", { className: "bg-center bg-[url('./public/administradores.jpg')] p-36 ml-28 bg-cover" }),
-        /* @__PURE__ */ jsx("img", { className: "bg-center bg-[url('./public/relacionistaIndustrial.jpg')] p-36 ml-28 bg-cover" }),
-        /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Limpieza" }),
-        /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Chofer" }),
-        /* @__PURE__ */ jsx("div", { className: "text-2xl", children: "Sanitarios" }),
-        /* @__PURE__ */ jsx("img", { className: "mb-10 bg-center bg-[url('./public/limpieza.jpg')] p-36 ml-28 bg-cover" }),
-        /* @__PURE__ */ jsx("img", { className: "mb-10 bg-center bg-[url('./public/chofer.jpg')] p-36 ml-28 bg-cover" }),
-        /* @__PURE__ */ jsx("img", { className: "mb-10 bg-center bg-[url('./public/sanitarios.jpg')] p-36 ml-28 bg-cover" })
-      ] })
+      /* @__PURE__ */ jsx("div", { className: "place-items-center mt-10 text-center font-semibold text-yellow-500 sm:grid sm:grid-cols-2 md:grid md:grid-cols-3 gap-4", children: personalSaluts.map((personalSalut) => /* @__PURE__ */ jsx(PersonalSalut, { personalSalut })) }),
+      /* @__PURE__ */ jsx("div", { className: "mt-28 text-center font-bold text-yellow-500 text-3xl", children: "Personal de Administracion" }),
+      /* @__PURE__ */ jsx("div", { className: "place-items-center mt-10 text-center font-semibold text-yellow-500 sm:grid sm:grid-cols-2 md:grid md:grid-cols-3 gap-4", children: personalAdministrativos.map((personalAdministrativo) => /* @__PURE__ */ jsx(PersonalAdministrativo, { personalAdministrativo })) })
     ] })
   ] });
 };
 const Especialidad = (props) => {
-  return /* @__PURE__ */ jsx("div", { className: "flex p-4", children: /* @__PURE__ */ jsxs("div", { className: "bg-yellow-500 p-6 rounded-lg border-2 border-gray-300", children: [
+  return /* @__PURE__ */ jsx("div", { className: "p-4", children: /* @__PURE__ */ jsxs("div", { className: "bg-yellow-500 p-6 rounded-lg border-2 border-gray-300", children: [
     /* @__PURE__ */ jsx("h2", { className: "text-sm tracking-widest mb-1 font-medium", children: props.especialidad.apartado }),
-    /* @__PURE__ */ jsx("h1", { className: "text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none", children: props.especialidad.titulo }),
+    /* @__PURE__ */ jsx("h1", { className: "sm:text-2xl md:text-2xl lg:text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none", children: props.especialidad.titulo }),
     /* @__PURE__ */ jsxs("p", { className: "flex items-center text-gray-600 mb-2", children: [
       /* @__PURE__ */ jsx("span", { className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0", children: /* @__PURE__ */ jsx("svg", { fill: "none", stroke: "currentColor", "stroke-linecap": "round", "stroke-linejoin": "round", "stroke-width": "2.5", className: "w-3 h-3", viewBox: "0 0 24 24", children: /* @__PURE__ */ jsx("path", { d: "M20 6L9 17l-5-5" }) }) }),
       props.especialidad.operaciones
@@ -8991,26 +9091,35 @@ const especialidades = [
     // medicos: []
   }
 ];
-const Profesiones = () => {
-  return /* @__PURE__ */ jsxs("section", { className: "flex flex-col bg-blue-900", children: [
-    /* @__PURE__ */ jsx("div", { className: "flex justify-center", children: /* @__PURE__ */ jsx("div", { className: "flex m-5", children: especialidades.map((especialidad) => /* @__PURE__ */ jsx(Especialidad, { especialidad })) }) }),
-    /* @__PURE__ */ jsxs("div", { className: "flex p-6", children: [
-      /* @__PURE__ */ jsx("div", { className: "text-yellow-500", children: "Contacts" }),
-      /* @__PURE__ */ jsxs("div", { children: [
-        /* @__PURE__ */ jsx("img", { className: "sm:h-52", src: "./public/avatar.jpg", alt: "hospital" }),
-        /* @__PURE__ */ jsxs("div", { className: "flex flex-col", children: [
-          /* @__PURE__ */ jsx("div", { className: "text-white", children: "Andrew Alfred" }),
-          /* @__PURE__ */ jsx("strong", { className: "text-white", children: "Profesional en autopsia" })
-        ] })
-      ] }),
-      /* @__PURE__ */ jsxs("div", { children: [
-        /* @__PURE__ */ jsx("img", { className: "sm:h-52 ml-5", src: "./public/avatar2.jpg", alt: "hospital" }),
-        /* @__PURE__ */ jsxs("div", { className: "flex flex-col", children: [
-          /* @__PURE__ */ jsx("div", { className: "text-white", children: "Debra Houston" }),
-          /* @__PURE__ */ jsx("strong", { className: "text-white", children: "Profesional en autopsia" })
-        ] })
+const imgAvatar = "" + new URL("avatar-22fe4b4f.jpg", import.meta.url).href;
+const Contacto = (props) => {
+  return /* @__PURE__ */ jsxs("div", { className: "p-4", children: [
+    /* @__PURE__ */ jsx("div", { className: "text-yellow-500", children: "Contacts" }),
+    /* @__PURE__ */ jsxs("div", { children: [
+      /* @__PURE__ */ jsx("img", { className: "sm:h-52", src: imgAvatar, alt: "hospital" }),
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col", children: [
+        /* @__PURE__ */ jsx("div", { className: "text-white", children: props.contacto.nombre }),
+        /* @__PURE__ */ jsx("strong", { className: "text-white", children: props.contacto.profesion })
       ] })
     ] })
+  ] });
+};
+const contactos = [
+  {
+    img: "",
+    nombre: "Andrew Alfred",
+    profesion: "Profesional en autopsia"
+  },
+  {
+    img: "",
+    nombre: "Debra Houston",
+    profesion: ""
+  }
+];
+const Profesiones = () => {
+  return /* @__PURE__ */ jsxs("section", { className: "flex flex-col bg-blue-900", children: [
+    /* @__PURE__ */ jsx("div", { className: "flex justify-center", children: /* @__PURE__ */ jsx("div", { className: "sm:grid sm:grid-cols-3 m-4", children: especialidades.map((especialidad) => /* @__PURE__ */ jsx(Especialidad, { especialidad })) }) }),
+    /* @__PURE__ */ jsx("div", { className: "flex p-6", children: contactos.map((contacto) => /* @__PURE__ */ jsx(Contacto, { contacto })) })
   ] });
 };
 const Paciente = (props) => {
@@ -9050,15 +9159,16 @@ const Pacientes = () => {
   ] }) });
 };
 const Somos = () => {
+  const [showPopup, setShowPopup] = reactExports.useState(false);
   return /* @__PURE__ */ jsx("div", { className: " bg-blue-900", children: /* @__PURE__ */ jsxs("div", { className: "bg-blue-500 rounded-lg mx-auto grid grid-cols-1 lg:max-w-5xl", children: [
     /* @__PURE__ */ jsxs("div", { className: "m-5 p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1", children: [
       /* @__PURE__ */ jsx("h1", { className: "mt-1 text-lg font-semibold text-white md:text-2xl", children: "Aquí estamos" }),
       /* @__PURE__ */ jsx("p", { className: "text-sm leading-4 font-medium text-yellow-500", children: "Trabajadores" })
     ] }),
     /* @__PURE__ */ jsxs("div", { className: "grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0", children: [
-      /* @__PURE__ */ jsx("img", { src: "./public/avatar.jpg", alt: "avatar", className: "m-5 w-30 h-30 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full", loading: "lazy" }),
-      /* @__PURE__ */ jsx("img", { src: "./public/avatar2.jpg", alt: "avatar1", className: "m-5 hidden w-30 h-30 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32", loading: "lazy" }),
-      /* @__PURE__ */ jsx("img", { src: "./public/avatar3.jpg", alt: "avatar2", className: "m-5 hidden w-30 h-30 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32", loading: "lazy" })
+      /* @__PURE__ */ jsx("img", { src: "./public/avatar.jpg", alt: "avatar", className: "m-5 w-30 h-20 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full", loading: "lazy" }),
+      /* @__PURE__ */ jsx("img", { src: "./public/avatar2.jpg", alt: "avatar1", className: "m-5 w-30 h-20 object-cover rounded-lg sm:h-52 sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32", loading: "lazy" }),
+      /* @__PURE__ */ jsx("img", { src: "./public/avatar3.jpg", alt: "avatar2", className: "m-5 w-30 h-20 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32", loading: "lazy" })
     ] }),
     /* @__PURE__ */ jsxs("div", { className: "mt-4 text-xs font-medium flex md:mt-2.5 lg:row-start-2", children: [
       /* @__PURE__ */ jsxs("div", { className: "text-indigo-600 flex items-center dark:text-indigo-400", children: [
@@ -9077,7 +9187,21 @@ const Somos = () => {
         /* @__PURE__ */ jsx("p", { className: "h-12", children: "L'Hospitalet de Llobregat, Barcelona" })
       ] })
     ] }),
-    /* @__PURE__ */ jsx("div", { className: "m-5 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4", children: /* @__PURE__ */ jsx("button", { type: "button", className: "bg-gradient-to-r from-blue-400 to-blue-900 hover:from-blue-900 hover:to-blue-400 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg", children: "Únete" }) }),
+    /* @__PURE__ */ jsxs("div", { className: "m-5 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4", children: [
+      /* @__PURE__ */ jsx("button", { onClick: () => setShowPopup(true), type: "button", className: "bg-gradient-to-r from-blue-400 to-blue-900 hover:from-blue-900 hover:to-blue-400 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg", children: "Únete" }),
+      /* @__PURE__ */ jsx(Popup, { visible: showPopup, onClose: () => setShowPopup(false), children: /* @__PURE__ */ jsxs("div", { className: "fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center", children: [
+        /* @__PURE__ */ jsxs("div", { className: "bg-white rounded p-2 w-72", children: [
+          /* @__PURE__ */ jsx("h1", { className: "font-semibold text-center text-xl text-gray-700", children: "Welcome back" }),
+          /* @__PURE__ */ jsx("p", { className: "text-center text-gray-700 mb-5", children: "Sign in" }),
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-col", children: [
+            /* @__PURE__ */ jsx("input", { type: "text", className: "border border-gray-700 p-2 rounded mb-5", placeholder: "email@example.com" }),
+            /* @__PURE__ */ jsx("input", { type: "text", className: "border border-gray-700 p-2 rounded mb-5", placeholder: "*****" })
+          ] }),
+          /* @__PURE__ */ jsx("div", { className: "text-center", children: /* @__PURE__ */ jsx("button", { className: "px-5 py-2 bg-gray-700 text-white rounded", children: "Sign in" }) })
+        ] }),
+        /* @__PURE__ */ jsx("div", { className: "bg-white p-2 rounded", children: /* @__PURE__ */ jsx("button", { onClick: () => setShowPopup(false), children: "X" }) })
+      ] }) })
+    ] }),
     /* @__PURE__ */ jsx("p", { className: "m-5 text-white mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1", children: "Somos trabajadores de este hospital con años de practicas y conocimiento. Venimos preparados con estudios universitarios para dar lo mejor a nuestros pacientos... Es más eso es lo que queremos." })
   ] }) });
 };
@@ -9127,11 +9251,11 @@ const AppRouter = () => {
   ] });
 };
 const Toolbar = () => {
-  return /* @__PURE__ */ jsxs("div", { className: "text-center border border-yellow-500 flex flex-row grid grid-cols-4 gap-4 bg-red-600 text-white", children: [
-    /* @__PURE__ */ jsx(Link, { to: routes.home, className: "text-xl border-r border-yellow-500", children: "Home" }),
-    /* @__PURE__ */ jsx(Link, { to: routes.profesiones, className: "text-xl border-r border-yellow-500", children: "Profesiones" }),
-    /* @__PURE__ */ jsx(Link, { to: routes.pacientes, className: "text-xl border-r border-yellow-500", children: "Pacientes" }),
-    /* @__PURE__ */ jsx(Link, { to: routes.somos, className: "text-xl", children: "Quienes somos" })
+  return /* @__PURE__ */ jsxs("div", { className: "border border-yellow-500 text-center grid grid-cols-4 flex bg-red-600 text-white", children: [
+    /* @__PURE__ */ jsx(Link, { to: routes.home, className: "sm:text-xl border-r border-yellow-500", children: "Home" }),
+    /* @__PURE__ */ jsx(Link, { to: routes.profesiones, className: "sm:text-xl border-r border-yellow-500", children: "Profesiones" }),
+    /* @__PURE__ */ jsx(Link, { to: routes.pacientes, className: "sm:text-xl border-r border-yellow-500", children: "Pacientes" }),
+    /* @__PURE__ */ jsx(Link, { to: routes.somos, className: "sm:text-xl", children: "Quienes somos" })
   ] });
 };
 function App() {

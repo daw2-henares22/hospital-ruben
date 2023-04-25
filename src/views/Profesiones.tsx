@@ -11,7 +11,7 @@ export const Profesiones = ()=>{
         <section className="flex flex-col bg-blue-900">
           <div className="flex justify-center">
             {/* <div className="flex bg-gradient-to-r from-yellow-500 to-yellow-900"> */}
-            <div className="flex m-5">
+            <div className="sm:grid sm:grid-cols-3 m-4">
               {especialidades.map((especialidad: IEspecialidad)=>(<Especialidad especialidad={especialidad}/>))}
               {/* <Tabla apartado="Apartado1" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/>
               <Tabla apartado="Apartado2" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/>

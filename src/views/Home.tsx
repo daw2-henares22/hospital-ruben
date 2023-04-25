@@ -9,22 +9,22 @@ import { personalAdministrativos } from "../domain/personalAdministrativo"
 import { IPersonalAdministrativo } from "../domain/interfaces"
 
 export const Home =()=>{
-  const [showPopup, setShowPopup] = useState(false)
-  const [showPopup2, setShowPopup2] = useState(false)
-  const [showPopup3, setShowPopup3] = useState(false)
-  const [showPopup4, setShowPopup4] = useState(false)
-  const [showPopup5, setShowPopup5] = useState(false)
-  const [showPopup6, setShowPopup6] = useState(false)
-  const [showPopup7, setShowPopup7] = useState(false)
-  const [showPopup8, setShowPopup8] = useState(false)
-  const [showPopup9, setShowPopup9] = useState(false)
-  const [showPopup10, setShowPopup10] = useState(false)
-  const [showPopup11, setShowPopup11] = useState(false)
-  const [showPopup12, setShowPopup12] = useState(false)
+  // const [showPopup, setShowPopup] = useState(false)
+  // const [showPopup2, setShowPopup2] = useState(false)
+  // const [showPopup3, setShowPopup3] = useState(false)
+  // const [showPopup4, setShowPopup4] = useState(false)
+  // const [showPopup5, setShowPopup5] = useState(false)
+  // const [showPopup6, setShowPopup6] = useState(false)
+  // const [showPopup7, setShowPopup7] = useState(false)
+  // const [showPopup8, setShowPopup8] = useState(false)
+  // const [showPopup9, setShowPopup9] = useState(false)
+  // const [showPopup10, setShowPopup10] = useState(false)
+  // const [showPopup11, setShowPopup11] = useState(false)
+  // const [showPopup12, setShowPopup12] = useState(false)
   
 
 
-  const handleOnClose = ()=> setShowPopup(false)
+  // const handleOnClose = ()=> setShowPopup(false)
   
   return(
       
@@ -56,13 +56,13 @@ export const Home =()=>{
              <div className="flex"><Tabla apartado="Apartado1" titulo="Especialistas" operaciones="Operaciones" consultas="Consultas" terapias="Terapias" informacion="Mas información" derechos="Derechos de autor Rubén Henares Hidalgo"/></div> */}
             <div className="mt-80 text-white text-center text-xl">Hospital Rubén: Trabajamos lo mas rapido posible para los pacientes tanto dentro como fuera con ambulancias.</div>
             <div className="mt-28 text-center font-bold text-yellow-500 text-3xl">Personal de Salud</div>
-            <div className="mt-10 text-center font-semibold text-yellow-500 grid grid-cols-3 gap-4">
-              {personalSaluts.map((personalSalut: IPersonalSalut)=>(<PersonalSalut personalSalut={personalSalut}/>))}
+            <div className="mt-10 text-center font-semibold text-yellow-500 sm:grid sm:grid-cols-2 md:grid md:grid-cols-3 gap-4">
+              {personalSaluts.map((personalSalut: IPersonalSalut, index)=>(<PersonalSalut imagenSalut={personalSaluts[index].imagen} personalSalut={personalSalut}/>))}
             </div>
             
             <div className="mt-28 text-center font-bold text-yellow-500 text-3xl">Personal de Administracion</div>  
-            <div className="mt-10 text-center font-semibold text-yellow-500 grid grid-cols-3 gap-4">
-              {personalAdministrativos.map((personalAdministrativo: IPersonalAdministrativo)=>(<PersonalAdministrativo personalAdministrativo={personalAdministrativo}/>))}
+            <div className="mt-10 text-center font-semibold text-yellow-500 sm:grid sm:grid-cols-2 md:grid md:grid-cols-3 gap-4">
+              {personalAdministrativos.map((personalAdministrativo: IPersonalAdministrativo, index)=>(<PersonalAdministrativo imagenAdministrativo={personalAdministrativos[index].imagen} personalAdministrativo={personalAdministrativo}/>))}
              {/* <div className="text-2xl">Medicos</div>
              <div className="text-2xl">Bioanalista</div>
              <div className="text-2xl">Enfermeros</div>

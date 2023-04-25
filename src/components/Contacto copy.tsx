@@ -1,7 +1,7 @@
-import { IContacto } from "../domain/interfaces";
+import { IContactoCopy } from "../domain/interfaces";
 import imgAvatar from "/public/avatar.jpg";
 export interface ContactoProps{
-    contacto: IContacto
+    contacto: IContactoCopy
 }
 
 export const Contacto = (props: ContactoProps)=>{
