@@ -12,7 +12,7 @@ export const Somos = ()=>{
   const handleOnClose = ()=> setShowPopup(false)
   
     return(
-      <div className=" bg-blue-900">
+      <div className=" bg-blue-100">
         <div className="bg-blue-500 rounded-lg mx-auto grid grid-cols-1 lg:max-w-5xl">
           <div className="m-5 p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
             <h1 className="mt-1 text-lg font-semibold text-white md:text-2xl">Aquí estamos</h1>
@@ -70,37 +70,12 @@ export const Somos = ()=>{
                     <button onClick={()=> setShowPopup(false)}>X</button>
                   </div>
                 </div>
-
-
-
-{/* 
-                <div className=" backdrop-blur-sm flex justify-center items-center">
-                <div className="p-2">
-                  <h1 className="font-semibold text-center text-xl text-gray-700">
-                    Welcome back
-                  </h1>
-                  <p className="mb-5 text-center text-gray-500">
-                    Sign in
-                  </p>
-                  <div className="flex flex-col">
-                    <input type="text" className="border border-gray-700 p-2 rounded mb-5" placeholder="email@example.com"/>
-                    <input type="text" className="border border-gray-700 p-2 rounded mb-5" placeholder="*****"/>
-                  </div>
-                  <div className="text-center">
-                    <button className="px-5 py-2 bg-gray-700 text-white rounded">
-                      Sign in
-                    </button>
-                  </div>
-               </div>
-                </div> */}
-                
               </Popup>
           </div>
           <p className="m-5 text-white mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1">
             Somos trabajadores de este hospital con años de practicas y conocimiento. Venimos preparados con estudios universitarios para dar lo mejor a nuestros pacientos... Es más eso es lo que queremos.
           </p>
         </div>
-            {/* <button type="button" className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">Check availability</button> */}
       </div>
     )
 }
