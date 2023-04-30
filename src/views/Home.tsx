@@ -3,7 +3,7 @@ import { PersonalSalut } from "../components/PersonalSalut"
 import Popup from "../components/Popup"
 import { personalSaluts } from "../domain/personalSaluts"
 import { IPersonalSalut } from "../domain/interfaces"
-
+import imgHospital from "/public/hospital.jpg";
 import { PersonalAdministrativo } from "../components/PersonalAdministrativo"
 import { personalAdministrativos } from "../domain/personalAdministrativo"
 import { IPersonalAdministrativo } from "../domain/interfaces"
@@ -18,7 +18,7 @@ export const Home =()=>{
            
            <p className="px-5 py-5 text-gray-500 font-bold text-2xl">Medicos de Barcelona</p>
           </div>
-          <img src="./public/hospital.jpg" className="bg-center w-full  p-36 absolute bg-cover"></img>
+          <img src={imgHospital} className="bg-center w-full  p-36 absolute bg-cover"></img>
         
          <div className="container mx-auto">
             <div className="mt-80 text-gray-500 font-bold text-center text-xl">Hospital Rubén: Trabajamos lo mas rapido posible para los pacientes tanto dentro como fuera con ambulancias.</div>
