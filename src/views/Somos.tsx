@@ -1,6 +1,9 @@
 // import { routes } from '../router'
 import { useState } from "react"
 import Popup from "../components/Popup"
+import imgAvatar from "/public/avatar.jpg";
+import imgAvatar2 from "/public/avatar2.jpg";
+import imgAvatar3 from "/public/avatar3.jpg";
 
 
 export const Somos = ()=>{
@@ -16,9 +19,9 @@ export const Somos = ()=>{
             <p className="text-sm leading-4 font-medium text-yellow-500">Trabajadores</p>
           </div>
           <div className="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
-            <img src="/public/avatar.jpg" alt="avatar" className="m-5 w-30 h-20 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy"></img>
-            <img src="/public/avatar2.jpg" alt="avatar1" className="m-5 w-30 h-20 object-cover rounded-lg sm:h-52 sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy"></img>
-            <img src="/public/avatar3.jpg" alt="avatar2" className="m-5 w-30 h-20 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy"></img>
+            <img src={imgAvatar} alt="avatar" className="m-5 w-30 h-20 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy"></img>
+            <img src={imgAvatar2} alt="avatar2" className="m-5 w-30 h-20 object-cover rounded-lg sm:h-52 sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy"></img>
+            <img src={imgAvatar3} alt="avatar3" className="m-5 w-30 h-20 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy"></img>
           </div>
           <div className="mt-4 text-xs font-medium flex md:mt-2.5 lg:row-start-2">
             <div className="text-indigo-600 flex items-center dark:text-indigo-400">

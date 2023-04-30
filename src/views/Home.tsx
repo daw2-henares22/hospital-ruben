@@ -3,7 +3,6 @@ import { PersonalSalut } from "../components/PersonalSalut"
 import Popup from "../components/Popup"
 import { personalSaluts } from "../domain/personalSaluts"
 import { IPersonalSalut } from "../domain/interfaces"
-import imgHospital from "/public/avatar.jpg";
 import { PersonalAdministrativo } from "../components/PersonalAdministrativo"
 import { personalAdministrativos } from "../domain/personalAdministrativo"
 import { IPersonalAdministrativo } from "../domain/interfaces"
