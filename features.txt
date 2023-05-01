@@ -1,0 +1,5 @@
+- Hacer lo del Netfily.
+- Cambio de colores.
+- Mejorar css o y optimizar código.
+- Trabajar con API.
+- Poner la página en un servidor web.

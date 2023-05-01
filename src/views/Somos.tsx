@@ -12,8 +12,7 @@ export const Somos = ()=>{
   const handleOnClose = ()=> setShowPopup(false)
   
     return(
-      <div className=" bg-blue-100">
-        <div className="bg-blue-500 rounded-lg mx-auto grid grid-cols-1 lg:max-w-5xl">
+        <div className="m-5 bg-blue-500 rounded-lg mx-auto grid grid-cols-1 lg:max-w-5xl">
           <div className="m-5 p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
             <h1 className="mt-1 text-lg font-semibold text-white md:text-2xl">Aquí estamos</h1>
             <p className="text-sm leading-4 font-medium text-yellow-500">Trabajadores</p>
@@ -76,6 +75,5 @@ export const Somos = ()=>{
             Somos trabajadores de este hospital con años de practicas y conocimiento. Venimos preparados con estudios universitarios para dar lo mejor a nuestros pacientos... Es más eso es lo que queremos.
           </p>
         </div>
-      </div>
     )
 }

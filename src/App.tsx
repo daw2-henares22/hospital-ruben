@@ -8,7 +8,7 @@ function App() {
 
   return (
 
-    <div className="App">
+    <div className="App bg-blue-100">
       <Toolbar/>
       <AppRouter/>
     </div>

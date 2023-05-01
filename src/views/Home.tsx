@@ -11,7 +11,7 @@ export const Home =()=>{
   
   return(
       
-      <section className="bg-blue-100">     
+      <section>
          <div className="flex flex-col text-center">
            <h1 className="m-5 text-6xl text-gray-700 font-semibold">Hospital Rubén</h1>
            
@@ -31,7 +31,6 @@ export const Home =()=>{
               {personalAdministrativos.map((personalAdministrativo: IPersonalAdministrativo)=>(<PersonalAdministrativo personalAdministrativo={personalAdministrativo}/>))}
             </div>
          </div>
-        
      </section>
     )
 }
