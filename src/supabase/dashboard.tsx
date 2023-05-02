@@ -1,22 +1,22 @@
-import React from "react";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+// import React from "react";
+// import { useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
 
-export default function Dashboard(props){
+// export default function Dashboard(props){
 
-    const navigate = useNavigate();
+//     const navigate = useNavigate();
 
-    useEffect(()=>{
-        // checkea si el usuario es admin
-        const isAdmin = false;
+//     useEffect(()=>{
+//         // checkea si el usuario es admin
+//         const isAdmin = false;
 
-        //Si no es, te redirige a ser usuario
-        if(!isAdmin){
-            navigate('/');
-        }
-    }, []);
+//         //Si no es, te redirige a ser usuario
+//         if(!isAdmin){
+//             navigate('/');
+//         }
+//     }, []);
 
-    return (
-        <div>Dashboard</div>
-    )
-}
+//     return (
+//         <div>Dashboard</div>
+//     )
+// }
