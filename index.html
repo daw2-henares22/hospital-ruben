@@ -5,11 +5,49 @@
     <!-- <meta http-equiv=»refresh» content=»0; url=https://hospitalruben.netlify.app/index.html»> -->
     <link rel="icon" type="image/png" href="public/corazonTodoRojo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="theme-color content"#f8fafc"> -->
     <title>Hospital Ruben</title>
     <link href="/dist/output.css" rel="stylesheet">
   </head>
   <body>
-    <div id="root"></div>
+    <script>
+      try{
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark')
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0B1120')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+      } catch (_) {}
+    </script>
+    <div class="bg-white dark:bg-black" id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv=»refresh» content=»0; url=https://hospitalruben.netlify.app/index.html»> -->
+    <link rel="icon" type="image/png" href="public/corazonTodoRojo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="theme-color content"#f8fafc"> -->
+    <title>Hospital Ruben</title>
+    <link href="/dist/output.css" rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      try{
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark')
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0B1120')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+      } catch (_) {}
+    </script>
+    <div class="bg-white dark:bg-black" id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
