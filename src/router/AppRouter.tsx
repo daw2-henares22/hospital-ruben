@@ -4,7 +4,9 @@ import { Profesiones } from "../views/Profesiones"
 import { Pacientes } from "../views/Pacientes"
 import { Somos } from "../views/Somos"
 import { BuscTrabajos } from "../views/BuscTrabajos"
+import { Error404 } from "../views/Error404"
 import { redirect } from "react-router-dom"
+import * as path from 'path';
 redirect("https://hospitalruben.netlify.app/");
 new Response("", {
     status: 302,
@@ -25,6 +27,7 @@ export const routes ={
     pacientes: '/pacientes',
     somos: '/somos',
     busctrabajos: '/busctrabajos',
+    error404: '/error404',
 } 
 
 
@@ -38,6 +41,7 @@ export const AppRouter = ()=>{
             <Route path={routes.pacientes} element={<Pacientes />}/>
             <Route path={routes.somos} element={<Somos />}/>
             <Route path={routes.busctrabajos} element={<BuscTrabajos />}/>
+            <Route path="*" element={<Error404 />}/>
         </Routes>
         
     )
