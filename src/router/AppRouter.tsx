@@ -12,7 +12,12 @@ new Response("", {
       Location: 'https://hospitalruben.netlify.app/',
     },
   });
-
+  new Response("", {
+    status: 404,
+    headers: {
+      Location: 'https://hospitalruben.netlify.app/',
+    },
+  });
 export const mainRoute = '/';
 export const routes ={
     home: '/home',
