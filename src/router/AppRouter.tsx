@@ -4,6 +4,14 @@ import { Profesiones } from "../views/Profesiones"
 import { Pacientes } from "../views/Pacientes"
 import { Somos } from "../views/Somos"
 import { BuscTrabajos } from "../views/BuscTrabajos"
+import { redirect } from "react-router-dom"
+redirect("https://hospitalruben.netlify.app/");
+new Response("", {
+    status: 302,
+    headers: {
+      Location: 'https://hospitalruben.netlify.app/',
+    },
+  });
 
 export const mainRoute = '/';
 export const routes ={
