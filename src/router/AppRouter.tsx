@@ -8,19 +8,19 @@ import { Error404 } from "../views/Error404"
 import { redirect } from "react-router-dom"
 import { Carrusell } from "../views/carrusell"
 import * as path from 'path';
-redirect("https://hospitalruben.netlify.app/");
-new Response("", {
-    status: 302,
-    headers: {
-      Location: 'https://hospitalruben.netlify.app/',
-    },
-  });
-  new Response("", {
-    status: 404,
-    headers: {
-      Location: 'https://hospitalruben.netlify.app/',
-    },
-  });
+// redirect("https://hospitalruben.netlify.app/");
+// new Response("", {
+//     status: 302,
+//     headers: {
+//       Location: 'https://hospitalruben.netlify.app/',
+//     },
+//   });
+//   new Response("", {
+//     status: 404,
+//     headers: {
+//       Location: 'https://hospitalruben.netlify.app/',
+//     },
+//   });
 export const mainRoute = '/';
 export const routes ={
     home: '/home',
