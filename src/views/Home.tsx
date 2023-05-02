@@ -13,7 +13,7 @@ export const Home =()=>{
       
       <section>
          <div className="flex flex-col text-center">
-           <h1 className="m-5 text-6xl text-gray-700 font-semibold">Hospital Rubén</h1>
+           <h1 className="mb-5 text-6xl text-gray-700 font-semibold">Hospital Rubén</h1>
            
            <p className="px-5 py-5 text-gray-500 font-bold text-2xl">Medicos de Barcelona</p>
           </div>
