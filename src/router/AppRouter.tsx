@@ -6,6 +6,7 @@ import { Somos } from "../views/Somos"
 import { BuscTrabajos } from "../views/BuscTrabajos"
 import { Error404 } from "../views/Error404"
 import { redirect } from "react-router-dom"
+import { Carrusell } from "../views/carrusell"
 import * as path from 'path';
 redirect("https://hospitalruben.netlify.app/");
 new Response("", {
@@ -28,6 +29,7 @@ export const routes ={
     somos: '/somos',
     busctrabajos: '/busctrabajos',
     error404: '/error404',
+    carrusell: '/carrusell',
 } 
 
 
@@ -42,6 +44,7 @@ export const AppRouter = ()=>{
             <Route path={routes.somos} element={<Somos />}/>
             <Route path={routes.busctrabajos} element={<BuscTrabajos />}/>
             <Route path="*" element={<Error404 />}/>
+            <Route path={routes.carrusell} element={<Carrusell />}/>
         </Routes>
         
     )
