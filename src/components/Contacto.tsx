@@ -7,12 +7,12 @@ export interface ContactoProps{
 export const Contacto = (props: ContactoProps)=>{
     return(
         <div className="p-4">
-            <div className="text-yellow-500">Contacts</div>
+            <div className="text-yellow-500 font-semibold">Contacts</div>
             <div>
                 <img className="sm:h-52" src={imgAvatar} alt="hospital"></img>
                 <div className="flex flex-col">
-                    <div className="text-white">{props.contacto.nombre}</div>
-                    <strong className="text-white">{props.contacto.profesion}</strong>
+                    <div className="text-gray-700 dark:text-white">{props.contacto.nombre}</div>
+                    <strong className="text-gray-700 dark:text-white">{props.contacto.profesion}</strong>
                 </div>
             </div>
         </div>

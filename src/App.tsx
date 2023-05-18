@@ -8,7 +8,7 @@ function App() {
 
   return (
 
-    <div className="App bg-blue-100">
+    <div className="App bg-blue-100 dark:bg-gray-800">
       <Toolbar/>
       <AppRouter/>
     </div>

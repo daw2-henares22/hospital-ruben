@@ -6,7 +6,7 @@ export const Pacientes = ()=>{
     return(
         <section className="text-center">
             <div className="flex flex-col">
-                <div className="m-5 mb-6 text-4xl text-gray-700 font-semibold">Clientes</div>
+                <div className="m-5 mb-6 text-4xl text-gray-700 font-semibold dark:text-white">Pacientes</div>
                     {pacientes.map((paciente: IPaciente)=>(<Paciente paciente={paciente}/>))}
             </div>
         </section>

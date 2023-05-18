@@ -2,19 +2,23 @@ import { Link } from 'react-router-dom'
 import { routes } from '../router'
 import { ImContrast } from "react-icons/im";
 
+const changeDarkMode = () =>{
+  document.documentElement.classList.toggle('dark')
+}
+
 export const Toolbar= ()=>{
   return (
     <div className='flex justify-end'>
-      <div className="dark:bg-slate-800 rounded-lg px-6 py-6 ">
-          <button className=" h-7 w-7 bg-gray-700 rounded-md shadow-lg" aria-hidden="true">
-            <ImContrast className='w-full text-white'/>
+      <div className="rounded-lg px-6 py-6">
+          <button className=" h-7 w-7 bg-gray-700 rounded-md shadow-lg dark:bg-white" aria-hidden="true" onClick={changeDarkMode}>
+            <ImContrast className='w-full text-white dark:text-gray-700'/>
           </button>
       </div>
-      <div className='pt-4 sm:text-xl text-blue-900 font-semibold'>
-        <Link to={routes.home} className="mr-3"> <button className='hover:text-indigo-500 hover:scale-x-105 hover:scale-y-105 transition duration-150 underline underline-offset-4 shadow-xl hover:shadow-lg'>Home</button></Link>
-        <Link to={routes.profesiones} className="mr-3"><button className='hover:text-indigo-500 hover:scale-x-105 hover:scale-y-105 transition duration-150 shadow-xl hover:shadow-lg'>Profesiones</button></Link>
-        <Link to={routes.pacientes} className="mr-3"> <button className='hover:text-indigo-500 hover:scale-x-105 hover:scale-y-105 transition duration-150 shadow-xl hover:shadow-lg'>Pacientes</button></Link>
-        <Link to={routes.somos} className="mr-3"><button className='hover:text-indigo-500 hover:scale-x-105 hover:scale-y-105 transition duration-150 shadow-xl hover:shadow-lg'>Quienes somos</button></Link>
+      <div className='pt-4 sm:text-xl text-blue-900 font-semibold dark:text-blue-100'>
+        <Link to={routes.home} className="mr-3"> <button className='dark:hover:text-indigo-300 hover:text-indigo-500 hover:scale-x-105 hover:scale-y-105 transition duration-150 underline underline-offset-4 shadow-xl hover:shadow-lg'>Home</button></Link>
+        <Link to={routes.profesiones} className="mr-3"><button className='dark:hover:text-indigo-300 hover:text-indigo-500 hover:scale-x-105 hover:scale-y-105 transition duration-150 shadow-xl hover:shadow-lg'>Profesiones</button></Link>
+        <Link to={routes.pacientes} className="mr-3"> <button className='dark:hover:text-indigo-300 hover:text-indigo-500 hover:scale-x-105 hover:scale-y-105 transition duration-150 shadow-xl hover:shadow-lg'>Pacientes</button></Link>
+        <Link to={routes.somos} className="mr-3"><button className='dark:hover:text-indigo-300 hover:text-indigo-500 hover:scale-x-105 hover:scale-y-105 transition duration-150 shadow-xl hover:shadow-lg'>Quienes somos</button></Link>
       </div>
     </div>
 
