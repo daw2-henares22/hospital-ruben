@@ -3,3 +3,5 @@
 - Mejorar css o y optimizar código.
 - Trabajar con API.
 - Poner la página en un servidor web.
+
+gestión de tickets js cuando se rompa algo que se haga un formulario donde se haga una incidencia y el tecnico puede comentar.

@@ -18,7 +18,7 @@ export const PersonalAdministrativo = (props: PersonalAdministrativoProps)=>{
         <div>
             <div className="text-2xl pb-3">{props.personalAdministrativo.nombre}</div>
               {/* <button className="ease-out duration-300" onClick={()=> setShowPopup(true)}><img src={imgMedico} alt="medicos" className="bg-[url('/public/medicos.jpg')] ease-out duration-300 p-36 rounded bg-cover"></img></button> */}
-              <button className="ease-out duration-300" onClick={()=> setShowPopup(true)}><img src={`${props.personalAdministrativo.imagen}`} alt="medicos" className="hover:scale-x-105 hover:scale-y-105 transition duration-150 w-80 rounded bg-cover"></img></button>
+              <button onClick={()=> setShowPopup(true)}><img src={`${props.personalAdministrativo.imagen}`} alt="medicos" className="hover:scale-x-105 hover:scale-y-105 transition duration-150 w-80 rounded bg-cover"></img></button>
               <Popup visible={showPopup} onClose={() => setShowPopup(false)}>
                <div className="bg-white dark:bg-gray-600 rounded p-6">
                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-5">
