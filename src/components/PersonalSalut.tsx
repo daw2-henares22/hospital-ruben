@@ -5,7 +5,6 @@ import imgMedico from '/medicos.jpg';
 
 export interface PersonalSalutProps{
     personalSalut: IPersonalSalut
-    
 }
 
 export const PersonalSalut = (props: PersonalSalutProps)=>{
