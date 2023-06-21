@@ -32,7 +32,7 @@ export const Carousel=(propsAdministrativo: PersonalAdministrativoProps, propsSa
                             </svg>
                         </ButtonBack>
                         <Slider>
-                            <div id="slider" className="md:grid md:grid-cols-3 gap-4 h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
+                            <div id="slider" className="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
                                 <Slide>
                                     <div className="flex flex-shrink-0 relative w-full sm:w-auto hover:scale-x-105 hover:scale-y-105 transition duration-150">
                                         <img className=" rounded-xl" onClick={()=> setShowPopup(true)} src="./medicos.jpg" alt="black chair and white table" />
