@@ -14,7 +14,6 @@ export const Home =()=>{
       <section>
          <div className="flex flex-col text-center">
            <h1 className="mb-5 text-6xl text-gray-700 font-semibold dark:text-white">Hospital Rubén</h1>
-           
            <p className="px-5 py-5 text-gray-500 font-bold text-2xl dark:text-gray-300">Medicos de Barcelona</p>
           </div>
           <img src="" className="bg-center w-full bg-[url('/public/hospital.jpg')] p-36 absolute bg-cover"></img>
