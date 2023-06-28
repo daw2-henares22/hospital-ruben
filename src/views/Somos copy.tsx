@@ -6,74 +6,50 @@ import imgAvatar2 from "/public/avatar2.jpg";
 import imgAvatar3 from "/public/avatar3.jpg";
 // import loginServices from "../services/login";
 import { login } from "../services/login";
-import axios from "axios"
-import md5 from "md5";
-import Cookies from "universal-cookie";
-const baseUrl = 'http://localhost:8080/somos'
-const cookies = new Cookies();
+
 
 export const Somos = ()=>{
-    const [form, setForm] = useState({
-       email: '',
-       password: '',
-   });
+  //   const [form, setForm] = useState({
+  //    form:{
+  //      username: '',
+  //      password: '',
+  //    }
+  //  });
 
-   const handleChange=async(e)=>{
-     setForm({
-        ...form,
-        [e.target.name]: e.target.value
-     })
-     console.log(form)
-   }
+  //  const handleChange=(e)=>{
+  //    setForm({
+  //       ...form,
+  //       [e.target.name]: e.target.value
+  //    })
+  //  }
    
-   const iniciarSesion=async()=>{
-    await axios.get(baseUrl, {params: {email: form.email, password: md5(form.password)}})
-    .then(response=>{
-      return response.data;
-    })
-    .then(response=>{
-      if(response.length>0){
-        const respuesta=response[0];
-        cookies.set('id', respuesta.id, {path: "/"}) //path "/" es para que sea accesible en todas las páginas
-        cookies.set('nombre', respuesta.nombre, {path: "/"}) //path "/" es para que sea accesible en todas las páginas
-        cookies.set('apellidos', respuesta.apellidos, {path: "/"}) //path "/" es para que sea accesible en todas las páginas
-        alert(`Bienvenido ${respuesta.nombre} ${respuesta.apellidos}`);
-      }else{
-        alert("El usuario o la contraseña no son correctos")
-      }
-    })
-    .catch(error=>{
-      console.log(error);
-    })
+  const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    try{
+      const user = await login({
+        email,
+        password
+      })
+      // console.log("This is Submit")
+      console.log(user)
+      setUser(user)
+      setEmail('')
+      setPassword('')
+    } catch(e) {
+      
+      setTimeout(() => {
+        setErrorMessage(null)
+      }, 5000)
+    }
+
   }
 
-  // const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault()
 
-  //   try{
-  //     const user = await login({
-  //       email,
-  //       password
-  //     })
-  //     // console.log("This is Submit")
-  //     console.log(user)
-  //     setUser(user)
-  //     setEmail('')
-  //     setPassword('')
-  //   } catch(e) {
-      
-  //     setTimeout(() => {
-  //       setErrorMessage(null)
-  //     }, 5000)
-  //   }
-
-  // }
-
-
-  // const [email, setEmail] = useState('')
-  // const [password, setPassword] = useState('')
-  // const [user, setUser] = useState(null)
-  // const [errorMessage, setErrorMessage] = useState(null)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [user, setUser] = useState(null)
+  const [errorMessage, setErrorMessage] = useState(null)
 
   const [showPopup, setShowPopup] = useState(false)
 
@@ -123,32 +99,31 @@ export const Somos = ()=>{
                     <p className="text-center text-gray-700 mb-5">
                       Sign in
                     </p>
-                    
+                    <Notification message={errorMessage} />
 
-                    <form className="flex flex-col">
+                    <form onSubmit={handleLogin} className="flex flex-col">
                       <input 
-                        type="text"
-                        value={form.email}
-                        name="email"
+                        type="text" 
+                        value={email}
+                        name="Email"
                         className="border border-gray-700 p-2 rounded mb-5" 
                         placeholder="email@example.com"
-                        onChange={handleChange}
+                        onChange={({target}) => setEmail(target.value)}
                       />
                       <input 
                         type="password"
-                        value={form.password}
-                        name="password"
+                        value={password}
+                        name="Password"
                         className="border border-gray-700 p-2 rounded mb-5" 
                         placeholder="Password"
-                        onChange={handleChange}
+                        onChange={({target}) => setPassword(target.value)}
                       />
-                    
+                    </form>
                     <div className="text-center">
-                      <button onClick={()=> iniciarSesion} className="px-5 py-2 bg-gray-700 text-white rounded">
+                      <button className="px-5 py-2 bg-gray-700 text-white rounded">
                         Sign in
                       </button>
                     </div>
-                    </form>
                   </div>
                   <div className="bg-white p-2 rounded">
                     <button onClick={()=> setShowPopup(false)}>X</button>

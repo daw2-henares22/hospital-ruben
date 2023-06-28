@@ -64,3 +64,8 @@ export interface IContactoCopy{
     nombre: String;
     profesion: String;
 }
+export interface IUser{
+    id: String;
+    email: String;
+    password: String;
+}
