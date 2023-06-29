@@ -13,18 +13,37 @@ const baseUrl = 'http://localhost:8080/somos'
 const cookies = new Cookies();
 
 export const Somos = ()=>{
+    const url=""
     const [form, setForm] = useState({
        email: '',
        password: '',
    });
 
-   const handleChange=async(e)=>{
-     setForm({
-        ...form,
-        [e.target.name]: e.target.value
-     })
-     console.log(form)
+   function submit (e){
+    e.preventDefault();
+    axios.post(url,{
+      email: form.email,
+      password: form.password
+    })
+    .then(res=>{
+      console.log(res.data)
+    })
    }
+
+  //  const handleChange=async(e)=>{
+  //    setForm({
+  //       ...form,
+  //       [e.target.name]: e.target.value
+  //    })
+  //    console.log(form)
+  //  }
+
+  function handleChange(e){
+    const newform={...form}
+    newform[e.target.id] = e.target.value
+    setForm(newform)
+    console.log(newform)
+  }
    
    const iniciarSesion=async()=>{
     await axios.get(baseUrl, {params: {email: form.email, password: md5(form.password)}})
@@ -125,22 +144,22 @@ export const Somos = ()=>{
                     </p>
                     
 
-                    <form className="flex flex-col">
+                    <form onSubmit={(e)=> submit (e)} className="flex flex-col">
                       <input 
                         type="text"
                         value={form.email}
-                        name="email"
+                        id="email"
                         className="border border-gray-700 p-2 rounded mb-5" 
                         placeholder="email@example.com"
-                        onChange={handleChange}
+                        onChange={(e)=>handleChange(e)}
                       />
                       <input 
                         type="password"
                         value={form.password}
-                        name="password"
+                        id="password"
                         className="border border-gray-700 p-2 rounded mb-5" 
                         placeholder="Password"
-                        onChange={handleChange}
+                        onChange={(e)=>handleChange(e)}
                       />
                     
                     <div className="text-center">
