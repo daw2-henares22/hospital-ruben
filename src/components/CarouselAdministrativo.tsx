@@ -18,7 +18,7 @@ export const CarouselAdministrativo=(propsAdministrativo: PersonalAdministrativo
     const [showPopup, setShowPopup] = useState(false)
     return (
         <div className="container">
-            <div className="flex items-center justify-center w-full h-full py-24 sm:py-8 px-4">
+            <div className="flex flex-col items-center justify-center w-full h-full py-24 sm:py-8 px-4">
                 {/* Carousel for desktop and large size devices */}
                 <CarouselProvider className="lg:block hidden" naturalSlideWidth={100} isIntrinsicHeight={true} totalSlides={3} visibleSlides={3} step={1} infinite={true}>
                     <div className="w-full relative flex items-center justify-center">
@@ -42,17 +42,17 @@ export const CarouselAdministrativo=(propsAdministrativo: PersonalAdministrativo
                                     </div>
                                 </Slide>
                                 <Popup visible={showPopup} onClose={() => setShowPopup(false)}>
-                                            <div className="bg-white dark:bg-gray-600 rounded p-6">
-                                                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-5">
-                                                    {propsAdministrativo.personalAdministrativo.nombre}
-                                                </h3>
-                                                <p className="mb-5 font-normal text-gray-500 dark:text-blue-100">
-                                                    {propsAdministrativo.personalAdministrativo.descripcion}
-                                                </p>
-                                            </div>
-                                        </Popup>
-                                </div>
-                            </Slider>
+                                    <div className="bg-white dark:bg-gray-600 rounded p-6">
+                                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-5">
+                                            {propsAdministrativo.personalAdministrativo.nombre}
+                                        </h3>
+                                        <p className="mb-5 font-normal text-gray-500 dark:text-blue-100">
+                                            {propsAdministrativo.personalAdministrativo.descripcion}
+                                        </p>
+                                    </div>
+                                </Popup>
+                            </div>
+                        </Slider>
                     <ButtonNext role="button" aria-label="slide forward" className="absolute z-30 right-0 mr-8 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400" id="next">
                         <svg width={8} height={14} viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L7 7L1 13" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />

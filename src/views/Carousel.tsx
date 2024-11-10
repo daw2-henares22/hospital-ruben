@@ -15,7 +15,7 @@ export const Carousel =()=>{
   return(
       
     <section>
-        {personalSaluts.map((personalSalut: IPersonalSalut)=>(<CarouselSalut  personalSalut={personalSalut}/>))}
+        {/* {personalSaluts.map((personalSalut: IPersonalSalut)=>(<CarouselSalut  personalSalut={personalSalut}/>))} */}
         {personalAdministrativos.map((personalAdministrativo: IPersonalAdministrativo)=>(<CarouselAdministrativo personalAdministrativo={personalAdministrativo}/>))}
     </section>
     )

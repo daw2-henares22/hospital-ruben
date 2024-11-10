@@ -5,3 +5,5 @@
 - Poner la página en un servidor web.
 
 gestión de tickets js cuando se rompa algo que se haga un formulario donde se haga una incidencia y el tecnico puede comentar.
+
+x-data-grid se puede instalar y es para hacer unos grids mas profesionales.
